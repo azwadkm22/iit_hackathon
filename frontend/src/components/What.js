@@ -1,19 +1,20 @@
 import {React, useEffect, useState} from 'react'
 import * as api from '../api/index.js';
 import { useSelector, useDispatch } from 'react-redux';
+import CountrySelect from './CountrySelect.js';
+import BasicCard from './BasicCard.js';
+import FloatingCard from './FloatingCard.js';
 function What(){
     // const dispatch = useDispatch();
     const fetchData = async () =>{
-    // const newData = await api.getCountries()
-    // const countries = newData.data;
-    // var cityList = []
-    // console.log(countries[0].country)
-    // console.log(newData.data)
+    const newData = await api.getCountries()
+    const countries = newData.data;
+    var cityList = []
+    console.log(countries[0].country)
+    console.log(newData.data)
 
-    // const state = await api.getGDPByCountry("BD")
-    // console.log (state.data)
-    const datapata = await api.getAirDataOfCountry("Bangladesh")
-    console.log(datapata)
+    const state = await api.getGDPByCountry("BD")
+    console.log (state.data)
     // for(let i = 0;i < countries.length; i++){
     //     var state = await api.getStatesByCountry(countries[i])
 
@@ -38,6 +39,9 @@ function What(){
     return(
         <div>
             <h1>App data</h1>
+            <CountrySelect />
+            {/* <BasicCard /> */}
+            <FloatingCard />
         </div>
     );
 }

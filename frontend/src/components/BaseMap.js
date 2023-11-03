@@ -3,13 +3,23 @@ import React, { useRef, useState} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import countryData from '../geo_json_data/countries.json';
 import { getAQIColor, getBivariateColor } from './MapColoringUtils.js';
+import FloatingInfo from './FloatingInfo';
+import FloatingCard from './FloatingCard';
 
 const BaseMap = () => {
   const mapRef = useRef(null);
-  const [hoveredCountry, setHoveredCountry] = useState(null);
+  const [clickedCountry, setClickedCountry] = useState(null);
+  const [infoShowing, setInfoShowing] = useState(false);
 //   const getColor = require('./MapColoringUtils.js');
 
 //   let hoveredCountry;
+
+
+  const findCountryRelatedInfo = (countryName) => {
+    setInfoShowing(true)
+  }
+
+
 
   const handleClick = (e) => {
     const { lat, lng } = e.latlng;
@@ -17,7 +27,7 @@ const BaseMap = () => {
   };
 
   const onCountryMouseOver = (e) => {
-
+    setInfoShowing(false)
     // const countryName = e.target.feature.properties.ADMIN;
 
     e.target.setStyle({
@@ -44,10 +54,17 @@ const BaseMap = () => {
   };
 
   const onCountryClicked = (e) => {
+
+    let countryName = e.target.feature.properties.ADMIN;
     e.target.setStyle({
-        fillOpacity: 0.8, // Restore the default fill color
+        fillOpacity: 1, // Restore the default fill color
       weight: 1, // Restore the default border
     });
+    setClickedCountry(countryName)
+
+    // console.log(countryName)
+    findCountryRelatedInfo(clickedCountry)
+
     // setHoveredCountry("None");   
     // console.log(e)
   };
@@ -62,7 +79,7 @@ const BaseMap = () => {
         // click: this.onCountryClick,
         mouseover: onCountryMouseOver,
         mouseout: onCountryMouseOut,
-        click: onCountryClicked,
+        click: onCountryClicked, 
     })
   }
 
@@ -86,6 +103,9 @@ const BaseMap = () => {
 //     return color;
 //   } 
   return (
+    <div>
+    <FloatingCard />
+    <FloatingInfo />
     <MapContainer
       center={[51.505, -0.09]}
       zoom={8}
@@ -147,6 +167,8 @@ const BaseMap = () => {
     </div> */}
       
     </MapContainer>
+    
+    </div>
   );
 };
 

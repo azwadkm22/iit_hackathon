@@ -174,17 +174,10 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            Relationship between air quality and social economic factors
+            EconAirBridge
           </Typography>
-          {/* <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search> */}
+          
+          <CountrySelect />
 
           {/* <CountrySelect /> */}
           <Box sx={{ flexGrow: 1 }} />

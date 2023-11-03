@@ -11,6 +11,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import { Link } from 'react-router-dom';
+import zIndex from '@material-ui/core/styles/zIndex';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -46,7 +47,7 @@ export default function FloatingCard() {
   ];
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={ {zIndex: 1000}}>
       <CardContent>
         <Typography variant="h5" component="h2">
           Top 10 Cleanest Cities

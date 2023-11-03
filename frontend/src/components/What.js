@@ -13,8 +13,15 @@ function What(){
     console.log(countries[0].country)
     console.log(newData.data)
 
+<<<<<<< HEAD
     const state = await api.getGDPByCountry("BD")
     console.log (state.data)
+=======
+    // const state = await api.getGDPByCountry("BD")
+    // console.log (state.data)
+    const datapata = await api.getAirDataOfCountry("Croatia")
+    console.log(datapata)
+>>>>>>> 8ed64419a7e63913c3f801217eac96477e0ef2f9
     // for(let i = 0;i < countries.length; i++){
     //     var state = await api.getStatesByCountry(countries[i])
 

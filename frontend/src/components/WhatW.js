@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 function WhatW(){
 
     const [data, setData] = useState(null);
-
+    const [states, setStates] = useState(null)
     const fetchData = async () =>{
         const storedData = localStorage.getItem('countriesList');
         if (storedData) {
@@ -15,9 +15,15 @@ function WhatW(){
             localStorage.setItem('countriesList', JSON.stringify(response));
         }
 
-        // const x = localStorage.getItem("countriesList");
+        
+        const x = localStorage.getItem("countriesList");
+        for(let i = 0; i < x.length; i++){
+            api.getAirDataOfCountry(x[i].country)
+        }
+        
+        console.log(x)
 
-        console.log(data)
+
     }
     useEffect(()=>{
     fetchData()

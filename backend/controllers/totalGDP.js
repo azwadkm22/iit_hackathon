@@ -72,5 +72,5 @@ const fetchMetaData = async () => {
   }
 };
 
-fetchMetaData();
-getDataAndLog();
+// fetchMetaData();
+// getDataAndLog();

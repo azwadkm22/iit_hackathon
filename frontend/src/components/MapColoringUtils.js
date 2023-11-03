@@ -58,14 +58,14 @@ function addHexColors(hexColor1, hexColor2) {
     console.log(hexColor1, hexColor2)
     // Convert HEX color codes to RGB
     function hexToRgb(hex) {
-      // Remove the "#" character, if present
-      hex = hex.replace(/^#/, '');
-      const bigint = parseInt(hex, 16);
-      const r = (bigint >> 16) & 255;
-      const g = (bigint >> 8) & 255;
-      const b = bigint & 255;
-      return [r, g, b];
-    }
+        hex = hex.replace('#', ''); // Remove the "#" character
+        const bigint = parseInt(hex, 16);
+        const r = (bigint >> 16) & 255;
+        const g = (bigint >> 8) & 255;
+        const b = bigint & 255;
+        return [r, g, b];
+      }
+      
   
     // Convert RGB to HEX
     function rgbToHex(r, g, b) {
@@ -179,6 +179,10 @@ export function getBivariateColor(countryName) {
     let resultColor;
     console.log(var1Color, var2Color)
     resultColor = addHexColors(var1Color, var2Color);
+
+    if (resultColor ==  undefined) {
+        resultColor = 'lavendar'
+    }
     return resultColor;
   };
   

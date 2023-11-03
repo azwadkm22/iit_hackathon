@@ -124,9 +124,13 @@ const BaseMap = () => {
     style={(feature) => {
         let color;
 
-        // color = getAQIColor(feature.properties.ADMIN)
+        color = getAQIColor(feature.properties.ADMIN)
 
-        color = getBivariateColor(feature.properties.ADMIN)
+        // color = getBivariateColor(feature.properties.ADMIN)
+
+        if (color = undefined) {
+            color = '#EEFFEE'
+        }
 
         return {
         fillOpacity: 0.4,

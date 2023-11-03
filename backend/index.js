@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
-import countryRoutes from './routes/countries.js';
+// import countryRoutes from './routes/countries.js';
 import totalgdpRoutes from './routes/totalGDP.js';
 import countryRoutes from './routes/countries.js';
 import cityRoutes from './routes/cities.js';

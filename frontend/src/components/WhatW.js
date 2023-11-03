@@ -12,8 +12,8 @@ function WhatW(){
 
     // const state = await api.getGDPByCountry("BD")
     // console.log (state.data)
-    const datapata = await api.getPopulationGrowthByCountry("BD")
-    console.log(datapata)
+    // const datapata = await api.getPopulationGrowthByCountry("BD")
+    // console.log(datapata)
     // for(let i = 0;i < countries.length; i++){
     //     var state = await api.getStatesByCountry(countries[i])
 
@@ -31,6 +31,7 @@ function WhatW(){
 
     // const allCities = await api.getAllCities()
     // console.log(allCities)
+    // await api.getAllCities()
   }
     useEffect(()=>{
     fetchData()

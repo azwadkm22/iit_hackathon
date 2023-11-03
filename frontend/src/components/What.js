@@ -7,21 +7,16 @@ import FloatingCard from './FloatingCard.js';
 function What(){
     // const dispatch = useDispatch();
     const fetchData = async () =>{
-    const newData = await api.getCountries()
-    const countries = newData.data;
-    var cityList = []
-    console.log(countries[0].country)
-    console.log(newData.data)
+    // const newData = await api.getCountries()
+    // const countries = newData.data;
+    // var cityList = []
+    // console.log(countries[0].country)
+    // console.log(newData.data)
 
-<<<<<<< HEAD
-    const state = await api.getGDPByCountry("BD")
-    console.log (state.data)
-=======
     // const state = await api.getGDPByCountry("BD")
     // console.log (state.data)
-    const datapata = await api.getAirDataOfCountry("Croatia")
-    console.log(datapata)
->>>>>>> 8ed64419a7e63913c3f801217eac96477e0ef2f9
+
+    await api.getAllCities()
     // for(let i = 0;i < countries.length; i++){
     //     var state = await api.getStatesByCountry(countries[i])
 

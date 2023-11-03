@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_KEY = '3ce03e42-3c1a-4c2b-9a53-d96c44bfe9bd'
+const API_KEY = '4de6f5d8-a62d-49aa-bbb7-9ebc42c6491e'
 export const getCountries = async(req,res)=>{
     try {
         const response = await axios.get(`http://api.airvisual.com/v2/countries?key=${API_KEY}`);

@@ -11,7 +11,7 @@ function App() {
       {/* <RankingsPage /> */}
       {/* <BaseMap /> */}
 
-      <What />
+      <WhatW />
       {/* <WhatW /> */}
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" />

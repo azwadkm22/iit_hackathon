@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import countryRoutes from './routes/countries.js';
-
+import totalgdpRoutes from './routes/totalGDP.js';
 
 const app = express();
 app.use(bodyParser.json({limit:"30mb",extended:true}));
@@ -15,6 +15,7 @@ app.use('/countries',countryRoutes);
 app.use('/cities',citiyRoutes);
 app.use('/states',stateRoutes);
 app.use('/air', airRoutes);
+app.use('/totalgdp', totalgdpRoutes );
 
 //mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/
 const CONNECTION_URL = 'mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/';

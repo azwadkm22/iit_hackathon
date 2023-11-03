@@ -16,3 +16,6 @@ export const getStatesByCountry = (country) => API.get(`/states/s/${country}`)
 export const getCitiesByState = (country, state) => API.get(`/cities/c/${country}/s/${state}`)
 export const getCityAirData = (city) => API.get(`/air/c/${city}`)
 export const getAllCities = () => API.get('/cities/')
+
+
+export const getGDPByCountry = (country) => API.get(`/totalgdp/c/${country}`)

@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import BaseMap from './components/BaseMap';
 import RankingsPage from './pages/RankingsPage';
-import What from './components/What';
+import WhatW from './components/WhatW';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       {/* <RankingsPage /> */}
       {/* <BaseMap /> */}
 
-      <What />
+      <WhatW />
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>

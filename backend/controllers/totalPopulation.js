@@ -1,8 +1,10 @@
 import fetch from 'node-fetch';
+import axios from 'axios';
 
 const country = 'BD';
 const apiUrl = 'https://api.worldbank.org/v2/country/' + country + '/indicator/SP.POP.TOTL?format=json';
 const apiUrlForCache = 'https://api.worldbank.org/v2/country/' + country + '/indicator/SP.POP.TOTL?format=json&per_page=1';
+
 
 export const getTotalPopulationByCountry = async(req, res)=>{
   try {

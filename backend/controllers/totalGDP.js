@@ -6,7 +6,6 @@ const apiUrl = 'https://api.worldbank.org/v2/country/'+ country +'/indicator/NY.
 const apiUrlForCache = 'https://api.worldbank.org/v2/country/'+ country +'/indicator/NY.GDP.MKTP.CD?format=json&per_page=1';
 
 
-
 export const getGDPByCountry = async(req, res)=>{
     try {
         console.log("kabbo bhai er code")

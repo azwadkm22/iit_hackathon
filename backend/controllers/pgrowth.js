@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import axios from 'axios';
 
 const country = 'BD';
 const apiUrl = 'https://api.worldbank.org/v2/countries/'+ country +'/indicators/SP.POP.GROW?format=json';

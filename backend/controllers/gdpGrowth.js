@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import fetch from 'node-fetch';
+import axios from 'axios';
 
 const country = 'usa';
 const apiUrl = 'https://api.worldbank.org/v2/country/'+ country +'/indicator/NY.GDP.MKTP.KD.ZG?format=json';

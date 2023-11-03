@@ -9,6 +9,7 @@ import countryRoutes from './routes/countries.js';
 import cityRoutes from './routes/cities.js';
 import stateRoutes from './routes/states.js';
 import airRoutes from './routes/air.js';
+import totalpopulationRoutes from './routes/totalPopulation.js';
 
 const app = express();
 app.use(bodyParser.json({limit:"30mb",extended:true}));
@@ -20,11 +21,12 @@ app.use('/cities',cityRoutes);
 app.use('/states',stateRoutes);
 app.use('/air', airRoutes);
 app.use('/totalgdp', totalgdpRoutes );
+app.use('/totalpopulation', totalpopulationRoutes );
 
 //mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/
 const CONNECTION_URL = 'mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/';
 //GkaBOED4BoayvHFX
-const PORT = process.env.PORT  || 5000;
+const PORT = process.env.PORT  || 5001;
 mongoose.connect(CONNECTION_URL,{ useNewUrlParser: true, useUnifiedTopology: true }).then(
     ()=>app.listen(PORT, ()=>console.log(`Server running on port ${PORT}`))
 ).catch(

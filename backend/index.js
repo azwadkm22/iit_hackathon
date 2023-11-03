@@ -13,7 +13,8 @@ app.use(cors());
 
 app.use('/countries',countryRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://hack_the_verse_ard:GkaBOED4BoayvHFX@cluster0.zd1azte.mongodb.net/';
+//mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/
+const CONNECTION_URL = 'mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/';
 //GkaBOED4BoayvHFX
 const PORT = process.env.PORT  || 5000;
 mongoose.connect(CONNECTION_URL,{ useNewUrlParser: true, useUnifiedTopology: true }).then(

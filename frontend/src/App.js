@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import BaseMap from './components/BaseMap';
+import RankingsPage from './pages/RankingsPage';
 
 function App() {
   return (
     <div className="App">
 
+      {/* <RankingsPage /> */}
       <BaseMap />
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" />

@@ -2,11 +2,12 @@
 import React, { useRef, useState} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from 'react-leaflet';
 import countryData from '../geo_json_data/countries.json';
+import { getAQIColor, getBivariateColor } from './MapColoringUtils.js';
 
 const BaseMap = () => {
   const mapRef = useRef(null);
   const [hoveredCountry, setHoveredCountry] = useState(null);
-  const getColor = require('./MapColoringUtils.js');
+//   const getColor = require('./MapColoringUtils.js');
 
 //   let hoveredCountry;
 
@@ -123,7 +124,9 @@ const BaseMap = () => {
     style={(feature) => {
         let color;
 
-        color = getColor(feature.properties.ADMIN)
+        // color = getAQIColor(feature.properties.ADMIN)
+
+        color = getBivariateColor(feature.properties.ADMIN)
 
         return {
         fillOpacity: 0.4,

@@ -14,6 +14,19 @@ export const getTopCities = async(req, res) =>{
 
     }
 }
+export const getAllCities = async(req, res) =>{
+    try {
+        // console.log('not a routing issue')
+        
+        
+        console.log(response)
+        res.status(200).json(response.data)
+        
+    } catch (error) {
+        res.status(404).json({message:error.message});
+
+    }
+}
 
 export const getCitiesByState = async(req, res) =>{
     try {

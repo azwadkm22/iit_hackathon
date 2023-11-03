@@ -10,7 +10,9 @@ import cityRoutes from './routes/cities.js';
 import stateRoutes from './routes/states.js';
 import airRoutes from './routes/air.js';
 import totalpopulationRoutes from './routes/totalPopulation.js';
-
+import populationgrowthRoutes from './routes/pgrowth.js';
+import gdppercapitaRoutes from './routes/gdpPerCapita.js';
+import gdpgrowthRoutes from './routes/gdpGrowth.js';
 const app = express();
 app.use(bodyParser.json({limit:"30mb",extended:true}));
 app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
@@ -22,7 +24,9 @@ app.use('/states',stateRoutes);
 app.use('/air', airRoutes);
 app.use('/totalgdp', totalgdpRoutes );
 app.use('/totalpopulation', totalpopulationRoutes );
-
+app.use('/populationgrowth', populationgrowthRoutes );
+app.use('/gdppercapita', gdppercapitaRoutes);
+app.use('/gdpgrowth', gdpgrowthRoutes);
 //mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/
 const CONNECTION_URL = 'mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/';
 //GkaBOED4BoayvHFX

@@ -23,3 +23,4 @@ export const getPopulationByCountry = (country) => API.get(`/totalpopulation/c/$
 export const getPopulationGrowthByCountry = (country) => API.get(`/populationgrowth/c/${country}`)
 export const getGdpPerCapitaByCountry = (country) => API.get(`/gdppercapita/c/${country}`)
 export const getGdpGrowthByCountry = (country) => API.get(`/gdpgrowth/c/${country}`)
+export const getAirDataOfCountry = (country) => API.get(`/countries/c/${country}`)

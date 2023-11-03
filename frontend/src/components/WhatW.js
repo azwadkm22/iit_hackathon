@@ -26,7 +26,7 @@ function WhatW(){
     // const cities = await api.getCitiesByState('China' , 'Hainan')
     // console.log(cities)
 
-    // const bruh = await api.getCityAirData('Dhaka')
+    const bruh = await api.getCityAirData('Dhaka')
     // console.log(bruh)
 
     // const allCities = await api.getAllCities()

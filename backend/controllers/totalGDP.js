@@ -12,6 +12,10 @@ export const getGDPByCountry = async(req, res)=>{
         const country = req.params.id
         const response = await axios.get(`https://api.worldbank.org/v2/country/${country}/indicator/NY.GDP.MKTP.CD?format=json`);
         console.log(response.data)
+        
+        
+        
+        
         res.status(200).json(response.data)
         
     } catch (error) {

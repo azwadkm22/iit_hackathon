@@ -14,7 +14,7 @@ const BaseMap = () => {
 
 //   let hoveredCountry;
 
-
+  
   const findCountryRelatedInfo = (countryName) => {
     setInfoShowing(true)
   }

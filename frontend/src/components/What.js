@@ -4,14 +4,16 @@ import { useSelector, useDispatch } from 'react-redux';
 function What(){
     // const dispatch = useDispatch();
     const fetchData = async () =>{
-    const newData = await api.getCountries()
-    const countries = newData.data;
-    var cityList = []
-    console.log(countries[0].country)
-    console.log(newData.data)
+    // const newData = await api.getCountries()
+    // const countries = newData.data;
+    // var cityList = []
+    // console.log(countries[0].country)
+    // console.log(newData.data)
 
-    const state = await api.getGDPByCountry("BD")
-    console.log (state.data)
+    // const state = await api.getGDPByCountry("BD")
+    // console.log (state.data)
+    const datapata = await api.getAirDataOfCountry("Bangladesh")
+    console.log(datapata)
     // for(let i = 0;i < countries.length; i++){
     //     var state = await api.getStatesByCountry(countries[i])
 

@@ -2,6 +2,8 @@ import fetch from 'node-fetch';
 
 const country = 'BD';
 const apiUrl = 'https://api.worldbank.org/v2/countries/'+ country +'/indicators/SP.POP.GROW?format=json';
+const apiUrlForCache = 'https://api.worldbank.org/v2/countries/'+ country +'/indicators/SP.POP.GROW?format=json&per_page=1';
+
 
 const fetchData = async () => {
   try {
@@ -42,4 +44,20 @@ const getDataAndLog = async () => {
   console.log(extractedData);
 };
 
+const fetchMetaData = async () => {
+  try {
+    const response = await fetch(apiUrlForCache);
+    if (response.ok) {
+      const data = await response.json();
+      const lastUpdated = data[0].lastupdated;
+      console.log('Last Updated:', lastUpdated);
+    } else {
+      console.error('Failed to fetch metadata:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error fetching metadata:', error);
+  }
+};
+
+fetchMetaData();
 getDataAndLog();

@@ -12,7 +12,7 @@ function What(){
 
     // const state = await api.getGDPByCountry("BD")
     // console.log (state.data)
-    const datapata = await api.getAirDataOfCountry("Bangladesh")
+    const datapata = await api.getAirDataOfCountry("Croatia")
     console.log(datapata)
     // for(let i = 0;i < countries.length; i++){
     //     var state = await api.getStatesByCountry(countries[i])

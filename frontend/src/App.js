@@ -3,15 +3,15 @@ import './App.css';
 import BaseMap from './components/BaseMap';
 import RankingsPage from './pages/RankingsPage';
 import WhatW from './components/WhatW';
-
+import What from './components/What'
 function App() {
   return (
     <div className="App">
 
       {/* <RankingsPage /> */}
       {/* <BaseMap /> */}
-
-      <WhatW />
+      <What/>
+      {/* <WhatW /> */}
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" />
         <p>

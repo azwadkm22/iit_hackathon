@@ -4,6 +4,18 @@ const country = 'BD';
 const apiUrl = 'https://api.worldbank.org/v2/country/' + country + '/indicator/SP.POP.TOTL?format=json';
 const apiUrlForCache = 'https://api.worldbank.org/v2/country/' + country + '/indicator/SP.POP.TOTL?format=json&per_page=1';
 
+export const getTotalPopulationByCountry = async(req, res)=>{
+  try {
+      console.log("kabbo bhai er code")
+      const country = req.params.id
+      const response = await axios.get(`https://api.worldbank.org/v2/country/${country}/indicator/SP.POP.TOTL?format=json`);
+      console.log(response.data)
+      res.status(200).json(response.data)
+      
+  } catch (error) {
+      res.status(404).json({message:error.message});
+  }
+}
 
 const fetchData = async () => {
   try {
@@ -60,6 +72,3 @@ const fetchMetaData = async () => {
     console.error('Error fetching metadata:', error);
   }
 };
-
-fetchMetaData();
-getDataAndLog();

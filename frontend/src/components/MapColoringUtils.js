@@ -33,7 +33,10 @@ let GDP_Levels = {
 
 
 
+
 const getAQILevel = (countryName) => {
+
+    
     // let AQI_level;
     // if (countryName == "India")
     // {

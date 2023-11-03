@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import axios from "axios";
+import axios from 'axios';
 
 const country = 'BD';
 const apiUrl = 'https://api.worldbank.org/v2/country/'+ country +'/indicator/NY.GDP.MKTP.CD?format=json';

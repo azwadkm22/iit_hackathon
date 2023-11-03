@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({limit:"30mb",extended:true}));
 app.use(cors());
 
 app.use('/countries',countryRoutes);
+app.use('/cities',citiyRoutes);
+app.use('/states',stateRoutes);
+app.use('/air', airRoutes);
 
 //mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/
 const CONNECTION_URL = 'mongodb+srv://kabbobhai:kabbobhai123@cluster0.zd1azte.mongodb.net/';

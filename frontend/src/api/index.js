@@ -10,4 +10,8 @@ API.interceptors.request.use((req) => {
 });
 
 
-export const getCountries = (formData) => API.get('/countries/');
+export const getCountries = () => API.get('/countries/');
+export const getTopCities = () => API.get('/cities/topCities/')
+export const getStatesByCountry = (country) => API.get(`/states/s/${country}`)
+export const getCitiesByState = (country, state) => API.get(`/cities/c/${country}/s/${state}`)
+export const getCityAirData = (city) => API.get(`/air/c/${city}`)

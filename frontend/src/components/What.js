@@ -10,7 +10,7 @@ function What(){
     console.log(countries[0].country)
     console.log(newData.data)
 
-    const state = await api.getStatesByCountry(countries[0].country)
+    const state = await api.getGDPByCountry("BD")
     console.log (state.data)
     // for(let i = 0;i < countries.length; i++){
     //     var state = await api.getStatesByCountry(countries[i])

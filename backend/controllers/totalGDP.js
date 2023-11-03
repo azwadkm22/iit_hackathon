@@ -1,4 +1,5 @@
 import fetch from 'node-fetch';
+import axios from "axios";
 
 const country = 'BD';
 const apiUrl = 'https://api.worldbank.org/v2/country/'+ country +'/indicator/NY.GDP.MKTP.CD?format=json';
@@ -11,8 +12,8 @@ export const getGDPByCountry = async(req, res)=>{
         console.log("kabbo bhai er code")
         const country = req.params.id
         const response = await axios.get(`https://api.worldbank.org/v2/country/${country}/indicator/NY.GDP.MKTP.CD?format=json`);
-        console.log(response.data.data)
-        res.status(200).json(response.data.data)
+        console.log(response.data)
+        res.status(200).json(response.data)
         
     } catch (error) {
         res.status(404).json({message:error.message});

@@ -19,4 +19,8 @@ export const getAllCities = () => API.get('/cities/')
 
 
 export const getGDPByCountry = (country) => API.get(`/totalgdp/c/${country}`)
+export const getPopulationByCountry = (country) => API.get(`/totalpopulation/c/${country}`)
+export const getPopulationGrowthByCountry = (country) => API.get(`/populationgrowth/c/${country}`)
+export const getGdpPerCapitaByCountry = (country) => API.get(`/gdppercapita/c/${country}`)
+export const getGdpGrowthByCountry = (country) => API.get(`/gdpgrowth/c/${country}`)
 export const getAirDataOfCountry = (country) => API.get(`/countries/c/${country}`)

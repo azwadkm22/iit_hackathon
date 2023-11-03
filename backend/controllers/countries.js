@@ -15,7 +15,7 @@ export const getCountries = async(req,res)=>{
                     console.log('this will always run')
                 }
             );
-        res.status(200).json(counties.data);
+        res.status(200).json(response.data);
     } catch (error) {
         res.status(404).json({message:error.message});
     }

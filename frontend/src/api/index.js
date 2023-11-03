@@ -10,4 +10,4 @@ API.interceptors.request.use((req) => {
 });
 
 
-export const getCountries = (formData) => API.get('/countries/getCountries');
+export const getCountries = (formData) => API.get('/countries/');

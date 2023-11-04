@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FloatingInfo() {
+export default function FloatingInfo(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(true);
 
@@ -42,7 +42,7 @@ export default function FloatingInfo() {
 
   const rows = [
     { label: 'GDP', value: "10000"},
-    { label: 'AQI', value: "Good"},
+    { label: 'AQI', value: props.aqiValue},
     { OtherInfo: 'OK'}
     // Add more cities and colors as needed
   ];

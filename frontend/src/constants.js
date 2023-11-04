@@ -1,4 +1,4 @@
-const countryNameFromISO = {
+export const countryNameFromISO = {
     'AD': 'Andorra',
     'AE': 'United Arab Emirates',
     'AF': 'Afghanistan',    
@@ -123,7 +123,7 @@ const countryNameFromISO = {
     'KW': 'Kuwait',
     'KY': 'Cayman Islands',
     'KZ': 'Kazakhstan',
-    'LA': "Lao People's Democratic Republic",
+    'LA': "Laos",
     'LB': 'Lebanon',
     'LC': 'Saint Lucia',
     'LI': 'Liechtenstein',
@@ -136,7 +136,7 @@ const countryNameFromISO = {
     'LY': 'Libya',
     'MA': 'Morocco',
     'MC': 'Monaco',
-    'MD': 'Moldova, Republic of',
+    'MD': 'Moldova',
     'ME': 'Montenegro',
     'MF': 'Saint Martin (French part)',
     'MG': 'Madagascar',
@@ -145,7 +145,7 @@ const countryNameFromISO = {
     'ML': 'Mali',
     'MM': 'Myanmar',
     'MN': 'Mongolia',
-    'MO': 'Macao',
+    'MO': 'Macao SAR',
     'MP': 'Northern Mariana Islands',
     'MQ': 'Martinique',
     'MR': 'Mauritania',
@@ -248,11 +248,11 @@ const countryNameFromISO = {
     'ZM': 'Zambia',
     'ZW': 'Zimbabwe',
 };
+export default countryNameFromISO
 
+// const countryISOFromName = {};
 
-const countryISOFromName = {};
-
-for (const iso in countryNameFromISO) {
-  const name = countryNameFromISO[iso];
-  countryISOFromName[name] = iso;
-}
+// for (const iso in countryNameFromISO) {
+//   const name = countryNameFromISO[iso];
+//   countryISOFromName[name] = iso;
+// }

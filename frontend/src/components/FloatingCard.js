@@ -41,8 +41,15 @@ export default function FloatingCard() {
   };
 
   const rows = [
-    { city: 'City 1', color: 'red' },
-    { city: 'City 2', color: 'blue' },
+
+
+
+{city: 'Good', color: '#9cd84e'},    
+    { city: 'Moderate', color: '#facf39' },    
+    { city: 'Unhealthy for sensitive groups', color: '#f99049' },
+    { city: 'Unhealthy', color: '#facf39' },
+    { city: 'Very unhealthy', color: '#a070b6' },
+    { city: 'Hazardous', color: '#a06a7b' },
     // Add more cities and colors as needed
   ];
 
@@ -50,7 +57,7 @@ export default function FloatingCard() {
     <Card className={classes.root} style={ {zIndex: 1000}}>
       <CardContent>
         <Typography variant="h5" component="h2">
-          Top 10 Cleanest Cities
+          AQI Grade
         </Typography>
       </CardContent>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
@@ -63,14 +70,13 @@ export default function FloatingCard() {
                     {row.city}
                   </TableCell>
                   <TableCell style={{ backgroundColor: row.color, borderRadius: '10px', textAlign: 'center'}}>
-                    {row.color}
+                   
                   </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
 
-          <Link to="/rankings">See full list.</Link>
         </CardContent>
       </Collapse>
       <IconButton

@@ -12,14 +12,25 @@ export const getGDPByCountry = async(req, res)=>{
         const country = req.params.id
         const response = await axios.get(`https://api.worldbank.org/v2/country/${country}/indicator/NY.GDP.MKTP.CD?format=json`);
         console.log(response.data)
+
+        const apiResponse = response.data[1];
+
+        const data2022 = apiResponse.filter(item => item.date === '2022').map(item => ({
+          country: item.country.value,
+          value: item.value
+        }));
         
         
         
         
-        res.status(200).json(response.data)
+        res.status(200).json(data2022)
         
     } catch (error) {
-        res.status(404).json({message:error.message});
+        console.log(error)
+        const data2022 = {'country': country,
+                          'value': 500
+        }
+        res.status(200).json(data2022);
     }
 }
 const fetchData = async () => {
